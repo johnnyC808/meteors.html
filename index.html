@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <link href="gamestyle.css" rel="stylesheet" type="text/css" />
+        <h4>V: 0.1.0</h4>
+    </head>
+    <body>
+        <script>
+            function showHigh(){
+                var high = localStorage.getItem("highscore");
+                if (high > 0){
+                    document.getElementById("highscore").innerHTML = "The current high score: " + high;
+                }
+                else{
+                    document.getElementById("highscore").innerHTML = "The current high score: 0";
+                }
+            }
+        </script>
+        <table width="50%" height="50%">
+            <tbody>
+                <tr>
+                    <td>
+                        <h2>Collect coins while avoiding falling rocks to generate a high score!</h2>
+                        <br>
+                        <h3>Hold arrow keys to move</h3>
+                        <br>
+                        <button id="play"><a href="game.html">Play Game</a></button>
+                        <hr>
+                        <br>
+                        <button onclick="showHigh()">Highscore</button>
+                        <p id="highscore"></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
